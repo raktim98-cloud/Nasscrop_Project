@@ -5,6 +5,7 @@
 body{
   font-family: "Montserrat", sans-serif;
   letter-spacing: 0.2px;
+  background: #F3F3F3;
 }
 
 @utility container {
@@ -26,10 +27,26 @@ body{
     --breakpoint-md: 768px; 
     --breakpoint-lg: 1024px; 
     --breakpoint-xl: 1083px; 
+
+    --color-secondary-color-1: #00A0C1;
+    --color-primary-color: #FFA62B;
+    --color-secondary-color-2: #16697A;
+    --color-text-color: #252B42;
+    --color-second-text-color: #737373;
+    --color-dark-background-color: #252B42;
+    --color-disabled-element-color: #8EC2F2;
+    --color-alert-color: #E77C40;
+    --color-danger-color: #E74040;
    
   }
+  .banner_shadow{
+    box-shadow: 0 13px 19px rgba(0, 0, 0, 0.07);
+  }
+  /* .secondary-color-1{
+    color: #00A0C1;
+  }
 
- 
+  */
  
  
   

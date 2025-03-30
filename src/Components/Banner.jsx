@@ -12,34 +12,38 @@ const countData = [
   {
     id:1,
     icon:Bannerimage_1,
-    counterNumber:"3k",
-    text:"CASES DONE"
+    counterNumber:"0.3",
+    text:"CASES DONE",
+    suffix:"k"
   },
   {
     id:2,
     icon:Bannerimage_2,
-    counterNumber:"45",
+    counterNumber:"0.04",
     text:"AWARD WINNING"
+    
   },
   {
     id:3,
     icon:Bannerimage_3,
-    counterNumber:"12+",
-    text:"COUNTRIES WORLDWIDE"
+    counterNumber:"0.12",
+    text:"COUNTRIES WORLDWIDE",
+    suffix:"+"
   },
   {
     id:4,
     icon:Bannerimage_4,
-    counterNumber:"1.5k",
-    text:"HAPPY CUSTOMERS"
+    counterNumber:"0.15",
+    text:"HAPPY CUSTOMERS",
+    suffix:"k"
   }
 ]
 
 function Banner() {
   return (
-    <section  style={backgroundBG} className=" bg-center bg-cover bg-no-repeat relative">
+    <section  style={backgroundBG} className=" bg-center bg-cover bg-no-repeat ">
       <div className='bg-black/50 pt-15 md:pt-[224px] pb-[150px] text-center ' >
-      <div className="container">
+      <div className="container lg:relative">
         <div className="max-w-[860px] py-10 mx-auto">
           <h1 className="font-extrabold text-[40px] md:text-[68px] leading-[57px] md:leading-20 text-white">Experts are here solve 
           your business problem.</h1>
@@ -52,11 +56,13 @@ function Banner() {
             
           </div>
         </div>
-      </div>
-    </div>
-    <div className="w-[1084px] lg:absolute left-0 bottom-0 translate-x-[120px] translate-y-0 grid grid-cols-1 items-center justify-center gap-6 py-[80px] px-10 md:grid-cols-2 lg:grid-cols-4">
-          {countData?.map(countItem => <BannerCount id={countItem.id} icon={countItem.icon} counterNumber={countItem.counterNumber} text={countItem.text} />)}
+        <div className="px-[87px] grid grid-cols-1 justify-center gap-8 md:grid-cols-2 lg:bg-white lg:gap-0 lg:grid-cols-4 lg:px-0 lg:absolute left-0 bottom-0 translate-x-0 lg:translate-y-[220px] lg:w-[1084px] lg:shadow-[0_13px_19px_rgba(0,0,0,0.07)]">
+          {countData?.map(countItem => <BannerCount id={countItem.id} icon={countItem.icon} counterNumber={countItem.counterNumber} text={countItem.text} suffix={countItem.suffix} />)}
         </div>
+      </div>
+     
+    </div>
+    
     </section>
   )
 }
