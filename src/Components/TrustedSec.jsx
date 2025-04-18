@@ -3,8 +3,37 @@ import TrastedBanner from "../assets/trusted_Banner.jpg";
 import FieldIcon_1 from "../assets/field_icon (1).png";
 import FieldIcon_2 from "../assets/field_icon (2).png";
 import PlayIconWhite from "../assets/play_white_icon.svg"
+import Modal from 'react-modal';
+import { useState } from "react";
+import ReactPlayer from 'react-player'
+const customStyles = {
+  content: {
+    top: '50%',
+    left: '50%',
+    right: 'auto',
+    bottom: 'auto',
+    marginRight: '-50%',
+    transform: 'translate(-50%, -50%)',
+  },
+};
+Modal.setAppElement('#root');
 
 function TrustedSec() {
+  const [modalIsOpen, setIsOpen] = useState(false);
+
+  function openModal() {
+    setIsOpen(true);
+  }
+
+  function afterOpenModal() {
+    // references are now sync'd and can be accessed.
+    subtitle.style.color = '#f00';
+  }
+
+  function closeModal() {
+    setIsOpen(false);
+  }
+ 
   return (
     <section className="py-20">
       <div className="container">
@@ -20,11 +49,11 @@ function TrustedSec() {
             {/* <div className="absolute top-1/2 left-1/2 -translate-1/2 "> 
             </div>*/}
             <div className="size-[97px] absolute top-1/2 left-1/2 -translate-1/2">
-              <a id="play-video" className="video-play-button" href="#">
+              <button onClick={openModal} id="play-video" className="video-play-button">
                 <span className="absolute top-1/2 left-1/2 z-10 translate-x-[-10px] translate-y-[-13px]">
                   <img src={PlayIconWhite} alt="white icon" />
                 </span>
-              </a>
+              </button>
 
               <div id="video-overlay" class="video-overlay">
                 <a class="video-overlay-close">&times;</a>
@@ -71,6 +100,20 @@ function TrustedSec() {
           </div>
         </div>
       </div>
+
+      <Modal
+        isOpen={modalIsOpen}
+        onAfterOpen={afterOpenModal}
+        onRequestClose={closeModal}
+        style={customStyles}
+        contentLabel="Example Modal"
+      >
+        
+        <button onClick={closeModal}>X</button>
+        <div>
+        <ReactPlayer url='https://www.youtube.com/watch?v=-ZYe9ZT8WNQ' />
+        </div>
+      </Modal>
     </section>
   );
 }
