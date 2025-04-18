@@ -1,6 +1,7 @@
 import Banner from "../Components/Banner"
 import Navbar from "../Components/Navbar"
 import Services from "../Components/Services"
+import TrustedSec from "../Components/TrustedSec"
 
 
 function Home() {
@@ -10,6 +11,7 @@ function Home() {
         <div>
             <Banner/>
             <Services/>
+            <TrustedSec/>
             
         </div>
     </section>

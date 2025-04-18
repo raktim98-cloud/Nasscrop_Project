@@ -1,33 +1,38 @@
 import React from 'react'
 import serviceIcon from "../assets/service_icon.png";
-import image_1 from "../assets/service_p_1 (1).png"
 
-import image_3 from "../assets/service_p_1 (3).png"
-import image_4 from "../assets/service_p_1 (4).png"
 import { Link } from 'react-router';
 
 const serviceData = [
     {
         id:1,
-        image: image_1,
+        image: <svg width="48" height="41" viewBox="0 0 48 41" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M42.5886 8.52554H37.519V3.45592C37.519 2.55955 37.1629 1.6999 36.5291 1.06608C35.8953 0.432251 35.0356 0.0761719 34.1393 0.0761719H13.8608C12.9644 0.0761719 12.1048 0.432251 11.4709 1.06608C10.8371 1.6999 10.481 2.55955 10.481 3.45592V8.52554H5.41142C4.06687 8.52554 2.77739 9.05966 1.82665 10.0104C0.875916 10.9611 0.341797 12.2506 0.341797 13.5952V37.2534C0.341797 38.1497 0.697876 39.0094 1.3317 39.6432C1.96553 40.2771 2.82518 40.6331 3.72154 40.6331H44.2785C45.1749 40.6331 46.0345 40.2771 46.6683 39.6432C47.3022 39.0094 47.6582 38.1497 47.6582 37.2534V13.5952C47.6582 12.2506 47.1241 10.9611 46.1734 10.0104C45.2227 9.05966 43.9332 8.52554 42.5886 8.52554ZM13.8608 3.45592H34.1393V8.52554H13.8608V3.45592ZM44.2785 37.2534H3.72154V22.0445H17.2405V30.4939H30.7595V22.0445H44.2785V37.2534ZM20.6203 22.0445H27.3798V27.1141H20.6203V22.0445ZM3.72154 18.6648V13.5952C3.72154 13.147 3.89958 12.7172 4.2165 12.4002C4.53341 12.0833 4.96323 11.9053 5.41142 11.9053H42.5886C43.0368 11.9053 43.4666 12.0833 43.7836 12.4002C44.1005 12.7172 44.2785 13.147 44.2785 13.5952V18.6648H3.72154Z" fill="#00A0C1"/>
+        </svg>,
         title:"Web Development",
         dascription:"the quick fox jumps over the lazy dog"
     },
     {
         id:2,
-        image: image_1,
+        image: <svg width="48" height="41" viewBox="0 0 48 41" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M42.5886 8.52554H37.519V3.45592C37.519 2.55955 37.1629 1.6999 36.5291 1.06608C35.8953 0.432251 35.0356 0.0761719 34.1393 0.0761719H13.8608C12.9644 0.0761719 12.1048 0.432251 11.4709 1.06608C10.8371 1.6999 10.481 2.55955 10.481 3.45592V8.52554H5.41142C4.06687 8.52554 2.77739 9.05966 1.82665 10.0104C0.875916 10.9611 0.341797 12.2506 0.341797 13.5952V37.2534C0.341797 38.1497 0.697876 39.0094 1.3317 39.6432C1.96553 40.2771 2.82518 40.6331 3.72154 40.6331H44.2785C45.1749 40.6331 46.0345 40.2771 46.6683 39.6432C47.3022 39.0094 47.6582 38.1497 47.6582 37.2534V13.5952C47.6582 12.2506 47.1241 10.9611 46.1734 10.0104C45.2227 9.05966 43.9332 8.52554 42.5886 8.52554ZM13.8608 3.45592H34.1393V8.52554H13.8608V3.45592ZM44.2785 37.2534H3.72154V22.0445H17.2405V30.4939H30.7595V22.0445H44.2785V37.2534ZM20.6203 22.0445H27.3798V27.1141H20.6203V22.0445ZM3.72154 18.6648V13.5952C3.72154 13.147 3.89958 12.7172 4.2165 12.4002C4.53341 12.0833 4.96323 11.9053 5.41142 11.9053H42.5886C43.0368 11.9053 43.4666 12.0833 43.7836 12.4002C44.1005 12.7172 44.2785 13.147 44.2785 13.5952V18.6648H3.72154Z" fill="#00A0C1"/>
+        </svg>,
         title:"Web Development",
         dascription:"the quick fox jumps over the lazy dog"
     },
     {
         id:3,
-        image: image_3,
+        image: <svg width="48" height="41" viewBox="0 0 48 41" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M42.5886 8.52554H37.519V3.45592C37.519 2.55955 37.1629 1.6999 36.5291 1.06608C35.8953 0.432251 35.0356 0.0761719 34.1393 0.0761719H13.8608C12.9644 0.0761719 12.1048 0.432251 11.4709 1.06608C10.8371 1.6999 10.481 2.55955 10.481 3.45592V8.52554H5.41142C4.06687 8.52554 2.77739 9.05966 1.82665 10.0104C0.875916 10.9611 0.341797 12.2506 0.341797 13.5952V37.2534C0.341797 38.1497 0.697876 39.0094 1.3317 39.6432C1.96553 40.2771 2.82518 40.6331 3.72154 40.6331H44.2785C45.1749 40.6331 46.0345 40.2771 46.6683 39.6432C47.3022 39.0094 47.6582 38.1497 47.6582 37.2534V13.5952C47.6582 12.2506 47.1241 10.9611 46.1734 10.0104C45.2227 9.05966 43.9332 8.52554 42.5886 8.52554ZM13.8608 3.45592H34.1393V8.52554H13.8608V3.45592ZM44.2785 37.2534H3.72154V22.0445H17.2405V30.4939H30.7595V22.0445H44.2785V37.2534ZM20.6203 22.0445H27.3798V27.1141H20.6203V22.0445ZM3.72154 18.6648V13.5952C3.72154 13.147 3.89958 12.7172 4.2165 12.4002C4.53341 12.0833 4.96323 11.9053 5.41142 11.9053H42.5886C43.0368 11.9053 43.4666 12.0833 43.7836 12.4002C44.1005 12.7172 44.2785 13.147 44.2785 13.5952V18.6648H3.72154Z" fill="#00A0C1"/>
+        </svg>,
         title:"Web Development",
         dascription:"the quick fox jumps over the lazy dog"
     },
     {
         id:4,
-        image: image_4,
+        image: <svg width="48" height="41" viewBox="0 0 48 41" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M42.5886 8.52554H37.519V3.45592C37.519 2.55955 37.1629 1.6999 36.5291 1.06608C35.8953 0.432251 35.0356 0.0761719 34.1393 0.0761719H13.8608C12.9644 0.0761719 12.1048 0.432251 11.4709 1.06608C10.8371 1.6999 10.481 2.55955 10.481 3.45592V8.52554H5.41142C4.06687 8.52554 2.77739 9.05966 1.82665 10.0104C0.875916 10.9611 0.341797 12.2506 0.341797 13.5952V37.2534C0.341797 38.1497 0.697876 39.0094 1.3317 39.6432C1.96553 40.2771 2.82518 40.6331 3.72154 40.6331H44.2785C45.1749 40.6331 46.0345 40.2771 46.6683 39.6432C47.3022 39.0094 47.6582 38.1497 47.6582 37.2534V13.5952C47.6582 12.2506 47.1241 10.9611 46.1734 10.0104C45.2227 9.05966 43.9332 8.52554 42.5886 8.52554ZM13.8608 3.45592H34.1393V8.52554H13.8608V3.45592ZM44.2785 37.2534H3.72154V22.0445H17.2405V30.4939H30.7595V22.0445H44.2785V37.2534ZM20.6203 22.0445H27.3798V27.1141H20.6203V22.0445ZM3.72154 18.6648V13.5952C3.72154 13.147 3.89958 12.7172 4.2165 12.4002C4.53341 12.0833 4.96323 11.9053 5.41142 11.9053H42.5886C43.0368 11.9053 43.4666 12.0833 43.7836 12.4002C44.1005 12.7172 44.2785 13.147 44.2785 13.5952V18.6648H3.72154Z" fill="#00A0C1"/>
+        </svg>,
         title:"Web Development",
         dascription:"the quick fox jumps over the lazy dog"
     }
@@ -35,18 +40,18 @@ const serviceData = [
 
 const ServiceItem = ({image, title, dascription}) => {
     return (
-        <div className='flex flex-col items-center justify-center gap-6 bg-white px-10 py-9 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300'>
-            <div className='mb-4'>
-                <img src={image} alt={title} className='w-16 h-16 object-contain' />
+        <div className='service_item group flex flex-col items-center  justify-center gap-6 bg-white px-10 lg:px-0 py-9 rounded-lg  duration-300 transition-all hover:bg-dark-background-color hover:text-white '>
+            <div className='mb-4 '>
+                {image}
             </div>
-            <div className='text-center space-y-4'>
-                <h3 className='text-[16px] leading-[24px]  text-black'>{title}</h3>
-                <h3 className='text-gray-600 text-sm leading-[20px] font-bold px-3 '>{dascription}</h3>
+            <div className='text-center  space-y-4'>
+                <h3 className='text-[16px] leading-[24px]'>{title}</h3>
+                <h3 className='text-gray-600 text-sm leading-[20px] font-bold px-3 group-hover:text-white'>{dascription}</h3>
             
            <div className='flex justify-center'>
-           <Link to={'/'} className='w-[140px] flex items-center justify-center border  border-secondary-color-1 rounded-full gap-2 py-[10px] px-[30px]'>
-                <span className='leading-[28px] text-secondary-color-1 font-bold'>More</span>
-                <img src={serviceIcon} alt="arrow icon" className='w-4 h-4' />
+           <Link to={'/'} className='w-[140px] flex items-center justify-center border  border-secondary-color-1 rounded-full gap-2 py-[10px] px-[30px] group-hover:border-none group-hover:bg-white group-hover:w-[100px]'>
+                <span className='leading-[28px] text-secondary-color-1 font-bold transition-all group-hover:text-primary-color'>More</span>
+                <img src={serviceIcon} alt="arrow icon" className='w-4 h-4 transition-all group-hover:hidden' />
             </Link>
 
            </div>
@@ -65,7 +70,7 @@ const Services = () => {
   return (
     <section>
         <div className="container">
-            <div className='grid grid-cols-1 gap-8 py-[180px] px-[100px]'>
+            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 py-[180px] px-[100px] '>
             {serviceData.map((service) => (
                         <ServiceItem 
                             key={service.id} 
